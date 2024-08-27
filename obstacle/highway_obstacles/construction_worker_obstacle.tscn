@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjjrm4slmq6uq"]
+
+[ext_resource type="PackedScene" uid="uid://doqv5uax0pk2" path="res://obstacle/obstacle.tscn" id="1_6gr7d"]
+[ext_resource type="PackedScene" uid="uid://bxpxxwht3o3lj" path="res://entities/character/construction_worker.tscn" id="2_jpmn5"]
+
+[node name="ConstructionWorkerObstacle" instance=ExtResource("1_6gr7d")]
+
+[node name="ConstructionWorker" parent="." index="0" instance=ExtResource("2_jpmn5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+
+[editable path="ConstructionWorker"]

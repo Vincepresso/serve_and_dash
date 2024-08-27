@@ -1,0 +1,48 @@
+[gd_scene load_steps=10 format=3 uid="uid://bo23fp6nrjlt6"]
+
+[ext_resource type="PackedScene" uid="uid://vqpbf8f4gith" path="res://assets/models/food/soda-glass.glb" id="1_vamwp"]
+[ext_resource type="PackedScene" uid="uid://7nb4ekmdnedl" path="res://assets/models/food/cup-saucer.glb" id="2_lkgft"]
+[ext_resource type="PackedScene" uid="uid://d26wa2dwi3itp" path="res://assets/models/food/plate.glb" id="3_4o7ey"]
+[ext_resource type="PackedScene" uid="uid://b4o1kvqkufp53" path="res://assets/models/food/plate-broken.glb" id="4_24puf"]
+[ext_resource type="PackedScene" uid="uid://b4dx3wiu2v13s" path="res://assets/models/food/wine-red.glb" id="5_dfhg5"]
+[ext_resource type="PackedScene" uid="uid://bsqabw31hx1xy" path="res://assets/models/food/wine-white.glb" id="6_o0hg8"]
+[ext_resource type="PackedScene" uid="uid://2ow8eie3dy26" path="res://assets/models/food/cup-coffee.glb" id="7_tixve"]
+[ext_resource type="PackedScene" uid="uid://ctpk48by6j30y" path="res://assets/models/food/glass.glb" id="8_h6vkr"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ss2vx"]
+height = 0.407333
+radius = 0.206636
+
+[node name="Tray" type="RigidBody3D"]
+collision_layer = 2
+mass = 2.0
+freeze = true
+
+[node name="soda-glass2" parent="." instance=ExtResource("1_vamwp")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.0194417, 0.0401051, 0.143171)
+
+[node name="cup-saucer2" parent="." instance=ExtResource("2_lkgft")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.100072, 0.0436782, -0.0934661)
+
+[node name="plate2" parent="." instance=ExtResource("3_4o7ey")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="plate-broken" parent="." instance=ExtResource("4_24puf")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+
+[node name="wine-red2" parent="." instance=ExtResource("5_dfhg5")]
+transform = Transform3D(0.498863, 0.00158969, 0.0336617, -0.00210107, 0.499939, 0.00752777, -0.0336336, -0.0076521, 0.498809, 0.0483769, 0.0402734, -0.105629)
+
+[node name="wine-white2" parent="." instance=ExtResource("6_o0hg8")]
+transform = Transform3D(0.499926, -0.00120017, -0.00850232, 0.00111892, 0.499976, -0.00478424, 0.0085134, 0.0047645, 0.499905, -0.0906502, 0.0368155, 0.0469298)
+
+[node name="cup-coffee2" parent="." instance=ExtResource("7_tixve")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.0878537, 0.056638, -0.0967421)
+
+[node name="glass2" parent="." instance=ExtResource("8_h6vkr")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.105526, 0.0385225, 0.0169339)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.203701, 0)
+shape = SubResource("CylinderShape3D_ss2vx")

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://yy04lkofejbs"]
+
+[ext_resource type="PackedScene" uid="uid://doqv5uax0pk2" path="res://obstacle/obstacle.tscn" id="1_bb2gw"]
+[ext_resource type="PackedScene" uid="uid://dejnnau5v1jd1" path="res://entities/character/leonard.tscn" id="2_ov6r1"]
+
+[node name="LeonardObstacle" instance=ExtResource("1_bb2gw")]
+
+[node name="Leonard" parent="." index="0" instance=ExtResource("2_ov6r1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+
+[editable path="Leonard"]

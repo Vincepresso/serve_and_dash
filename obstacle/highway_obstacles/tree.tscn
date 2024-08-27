@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpy820tt2tgv0"]
+
+[ext_resource type="PackedScene" uid="uid://doqv5uax0pk2" path="res://obstacle/obstacle.tscn" id="1_u7hqo"]
+[ext_resource type="PackedScene" uid="uid://ccvx56vitxay3" path="res://assets/models/nature/CommonTree_4.gltf" id="2_eufxu"]
+
+[node name="Tree" instance=ExtResource("1_u7hqo")]
+
+[node name="CommonTree_42" parent="." index="1" instance=ExtResource("2_eufxu")]
+transform = Transform3D(0.0512651, -0.997251, -0.0535102, 0.707105, -0.00159201, 0.707107, -0.705248, -0.0740872, 0.705079, 3.11662, 0.325331, 0)

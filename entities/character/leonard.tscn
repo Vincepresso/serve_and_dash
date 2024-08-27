@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dejnnau5v1jd1"]
+
+[ext_resource type="Script" path="res://entities/character/character.gd" id="1_dskxj"]
+[ext_resource type="PackedScene" uid="uid://dvrbryplvoaq8" path="res://assets/models/leonard/leonard.glb" id="2_p1xdl"]
+[ext_resource type="AnimationLibrary" uid="uid://b5n0agqdr64pe" path="res://assets/anims/humanoid_poses.glb" id="3_dxbgh"]
+
+[node name="Leonard" type="Node3D"]
+script = ExtResource("1_dskxj")
+
+[node name="Visual" type="Node3D" parent="."]
+
+[node name="leonard" parent="Visual" instance=ExtResource("2_p1xdl")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Visual/leonard")
+libraries = {
+"humanoid_poses": ExtResource("3_dxbgh")
+}

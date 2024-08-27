@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://brjpcgfksan0o"]
+
+[ext_resource type="PackedScene" uid="uid://doqv5uax0pk2" path="res://obstacle/obstacle.tscn" id="1_iab5w"]
+[ext_resource type="PackedScene" uid="uid://dwmqimjb2wpq7" path="res://assets/models/nature/DeadTree_3.gltf" id="2_o7ydi"]
+
+[node name="DeadTree" instance=ExtResource("1_iab5w")]
+
+[node name="DeadTree_32" parent="." index="1" instance=ExtResource("2_o7ydi")]
+transform = Transform3D(-0.103348, 0.994645, 0, -0.994645, -0.103348, 0, 0, 0, 1, -4.46744, 0.446744, 0)

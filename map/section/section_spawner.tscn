@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3hdeer2vityu"]
+
+[ext_resource type="Script" path="res://map/section/section_spawner.gd" id="1_inmvi"]
+[ext_resource type="PackedScene" uid="uid://qwq5gdgfabdf" path="res://map/section/section_parts/highway_section_01.tscn" id="2_kefno"]
+[ext_resource type="PackedScene" uid="uid://bgsskvofggmep" path="res://map/section/section_parts/playground_section_01.tscn" id="3_crr88"]
+
+[node name="SectionSpawner" type="Node3D"]
+script = ExtResource("1_inmvi")
+section_parts = Array[PackedScene]([ExtResource("2_kefno"), ExtResource("3_crr88")])

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://doqv5uax0pk2"]
+
+[ext_resource type="Script" path="res://obstacle/obstacle.gd" id="1_yrxmx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vawx3"]
+size = Vector3(5, 0.5, 0.25)
+
+[node name="Obstacle" type="Area3D"]
+script = ExtResource("1_yrxmx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+shape = SubResource("BoxShape3D_vawx3")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

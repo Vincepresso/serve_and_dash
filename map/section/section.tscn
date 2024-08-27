@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://ch6xbwnx1mjw8"]
+
+[ext_resource type="Script" path="res://map/section/section.gd" id="1_2bovj"]
+[ext_resource type="PackedScene" uid="uid://dlg85xx6rp7qo" path="res://obstacle/obstacle_spawner.tscn" id="2_xu3ll"]
+[ext_resource type="PackedScene" uid="uid://brjpcgfksan0o" path="res://obstacle/highway_obstacles/dead_tree.tscn" id="3_aloht"]
+[ext_resource type="PackedScene" uid="uid://dpy820tt2tgv0" path="res://obstacle/highway_obstacles/tree.tscn" id="4_6n3jr"]
+
+[node name="Section" type="Node3D"]
+script = ExtResource("1_2bovj")
+
+[node name="SpawnTrigger" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpawnTrigger"]
+
+[node name="SectionEnd" type="Node3D" parent="."]
+
+[node name="Map" type="Node3D" parent="."]
+
+[node name="ObstacleSpawner" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("2_xu3ll")]
+obstacle_list = Array[PackedScene]([ExtResource("3_aloht"), ExtResource("4_6n3jr")])
+spawn_points = NodePath("../ObstacleSpawnPoints")
+
+[node name="ObstacleSpawnPoints" type="Node3D" parent="."]
+
+[connection signal="body_entered" from="SpawnTrigger" to="." method="_on_spawn_trigger_body_entered"]

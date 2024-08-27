@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://tl2tbw5anxh1"]
+
+[ext_resource type="Texture2D" uid="uid://bj06m8dl7frn2" path="res://assets/textures/skybox/skybox.png" id="1_bmdpi"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_pxxcv"]
+panorama = ExtResource("1_bmdpi")
+
+[sub_resource type="Sky" id="Sky_3dwge"]
+sky_material = SubResource("PanoramaSkyMaterial_pxxcv")
+
+[sub_resource type="Environment" id="Environment_liw70"]
+background_mode = 2
+background_color = Color(0.408591, 0.504163, 0.575821, 1)
+sky = SubResource("Sky_3dwge")
+ambient_light_source = 2
+ambient_light_color = Color(0.741385, 0.741385, 0.741385, 1)
+tonemap_mode = 2
+glow_enabled = true
+fog_enabled = true
+fog_light_color = Color(0.391464, 0.560155, 0.774815, 1)
+fog_density = 0.005
+
+[node name="WorldEnvironment" type="WorldEnvironment"]
+environment = SubResource("Environment_liw70")

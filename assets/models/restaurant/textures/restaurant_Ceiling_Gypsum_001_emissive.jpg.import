@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bhxehs1yjl41v"
+path.s3tc="res://.godot/imported/restaurant_Ceiling_Gypsum_001_emissive.jpg-8c2e4ca2f449db831004d0e99b2210b3.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "93c21866b6e1cddc0265d74f87084a4c"
+}
+
+[deps]
+
+source_file="res://assets/models/restaurant/textures/restaurant_Ceiling_Gypsum_001_emissive.jpg"
+dest_files=["res://.godot/imported/restaurant_Ceiling_Gypsum_001_emissive.jpg-8c2e4ca2f449db831004d0e99b2210b3.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

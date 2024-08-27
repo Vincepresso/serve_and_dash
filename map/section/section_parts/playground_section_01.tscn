@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgsskvofggmep"]
+
+[ext_resource type="PackedScene" uid="uid://ch6xbwnx1mjw8" path="res://map/section/section.tscn" id="1_gvfn8"]
+[ext_resource type="PackedScene" uid="uid://bfr7q853hi4d7" path="res://obstacle/obstacle_spawn_point.tscn" id="2_lst6m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ybnu8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3vg67"]
+albedo_color = Color(0.342444, 0.513238, 0.986382, 1)
+
+[node name="PlaygroundSection01" instance=ExtResource("1_gvfn8")]
+
+[node name="CollisionShape3D" parent="SpawnTrigger" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -2.5)
+shape = SubResource("BoxShape3D_ybnu8")
+
+[node name="SectionEnd" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -23)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -13)
+use_collision = true
+size = Vector3(1, 1, 20)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Map" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -2.5)
+material_override = SubResource("StandardMaterial3D_3vg67")
+use_collision = true
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Map" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -1)
+use_collision = true
+size = Vector3(1, 1, 2)
+
+[node name="ObstacleSpawnPoint" parent="ObstacleSpawnPoints" index="0" instance=ExtResource("2_lst6m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+
+[node name="ObstacleSpawnPoint2" parent="ObstacleSpawnPoints" index="1" instance=ExtResource("2_lst6m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14)
+
+[node name="ObstacleSpawnPoint3" parent="ObstacleSpawnPoints" index="2" instance=ExtResource("2_lst6m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -21)

@@ -1,0 +1,986 @@
+[gd_scene load_steps=69 format=3 uid="uid://cc0omwou7vm2l"]
+
+[ext_resource type="Script" path="res://map/start_scene/start_scene.gd" id="1_q5ynw"]
+[ext_resource type="Texture2D" uid="uid://f0dc7f5ivbly" path="res://assets/textures/nature/Bricks085_1K-JPG/Bricks085_1K-JPG_Color.jpg" id="11_24dao"]
+[ext_resource type="PackedScene" uid="uid://y8kse8lo2hv6" path="res://assets/models/restaurant/floor_tiled.tscn" id="11_t5qgq"]
+[ext_resource type="Texture2D" uid="uid://fca2xjkkyid7" path="res://assets/textures/nature/Bricks085_1K-JPG/Bricks085_1K-JPG_Displacement.jpg" id="12_dnydr"]
+[ext_resource type="Texture2D" uid="uid://duf3ag3o6fsxo" path="res://assets/textures/nature/Bricks085_1K-JPG/Bricks085_1K-JPG_NormalGL.jpg" id="13_ffw1w"]
+[ext_resource type="Texture2D" uid="uid://b0e3aibyjcmg" path="res://assets/textures/nature/Bricks085_1K-JPG/Bricks085_1K-JPG_Roughness.jpg" id="14_hdpbs"]
+[ext_resource type="PackedScene" uid="uid://o7333xnynqfr" path="res://assets/models/restaurant/double_booth.tscn" id="17_j3my7"]
+[ext_resource type="Texture2D" uid="uid://1xt7vgipka4a" path="res://assets/textures/nature/OfficeCeiling001_1K-JPG/OfficeCeiling001_1K-JPG_Color.jpg" id="17_wmcxu"]
+[ext_resource type="Texture2D" uid="uid://cg6wimpqquwpv" path="res://assets/textures/nature/OfficeCeiling001_1K-JPG/OfficeCeiling001_1K-JPG_AmbientOcclusion.jpg" id="18_4suwl"]
+[ext_resource type="PackedScene" uid="uid://bsyvgdyl8abii" path="res://assets/models/restaurant/fridge.tscn" id="18_gtnwm"]
+[ext_resource type="Texture2D" uid="uid://di5tuq3wu8dti" path="res://assets/textures/nature/OfficeCeiling001_1K-JPG/OfficeCeiling001_1K-JPG_Displacement.jpg" id="19_5pu0b"]
+[ext_resource type="PackedScene" uid="uid://dylsckmt56bp5" path="res://assets/models/restaurant/counter_long_1.tscn" id="19_rwd16"]
+[ext_resource type="PackedScene" uid="uid://b0w4lkaim50mj" path="res://assets/models/restaurant/counter_long_2.tscn" id="20_3ql58"]
+[ext_resource type="Texture2D" uid="uid://youy5xdfd87s" path="res://assets/textures/nature/OfficeCeiling001_1K-JPG/OfficeCeiling001_1K-JPG_NormalGL.jpg" id="20_r15rn"]
+[ext_resource type="Texture2D" uid="uid://diinrxc6km05x" path="res://assets/textures/nature/OfficeCeiling001_1K-JPG/OfficeCeiling001_1K-JPG_Roughness.jpg" id="21_hkr6x"]
+[ext_resource type="PackedScene" uid="uid://du4kk50gqj5x0" path="res://assets/models/restaurant/counter_med.tscn" id="21_tlxty"]
+[ext_resource type="Texture2D" uid="uid://c2ecudnq8njdy" path="res://assets/textures/misc/splash_logo.png" id="21_yk0t7"]
+[ext_resource type="PackedScene" uid="uid://cv7ooimlcwej4" path="res://assets/models/restaurant/tabouret.tscn" id="22_32vdu"]
+[ext_resource type="PackedScene" uid="uid://cre4g3epptubw" path="res://assets/models/restaurant/fryer.tscn" id="23_d5iky"]
+[ext_resource type="AudioStream" uid="uid://b8ie04o1hl82e" path="res://assets/audio/disco.wav" id="23_rqc57"]
+[ext_resource type="Texture2D" uid="uid://5rn6421vhod" path="res://assets/textures/ui/button_rectangle_border.png" id="24_cvjq0"]
+[ext_resource type="PackedScene" uid="uid://g88i85uekjuu" path="res://assets/models/restaurant/griddle.tscn" id="24_thdhg"]
+[ext_resource type="Texture2D" uid="uid://ctjjlvwmp0xvk" path="res://assets/textures/ui/arrow_decorative_s_small.png" id="25_63exu"]
+[ext_resource type="PackedScene" uid="uid://bjb1lwpqdd34m" path="res://assets/models/restaurant/table_long.tscn" id="25_nr7j1"]
+[ext_resource type="PackedScene" uid="uid://fsyd3cclv48r" path="res://entities/player/player_start.tscn" id="26_hohwi"]
+[ext_resource type="FontFile" uid="uid://dwunqesbfeshs" path="res://assets/fonts/Rubik-Black.ttf" id="27_frrse"]
+
+[sub_resource type="Environment" id="Environment_kvhbq"]
+background_mode = 1
+background_color = Color(0.48792, 0.359683, 0.357793, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7sfe0"]
+albedo_texture = ExtResource("11_24dao")
+roughness_texture = ExtResource("14_hdpbs")
+normal_enabled = true
+normal_texture = ExtResource("13_ffw1w")
+heightmap_enabled = true
+heightmap_texture = ExtResource("12_dnydr")
+uv1_scale = Vector3(1, 0.3, 0.1)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gstvx"]
+albedo_color = Color(0.783523, 0.783523, 0.783523, 1)
+albedo_texture = ExtResource("17_wmcxu")
+roughness_texture = ExtResource("21_hkr6x")
+normal_enabled = true
+normal_texture = ExtResource("20_r15rn")
+ao_enabled = true
+ao_texture = ExtResource("18_4suwl")
+heightmap_enabled = true
+heightmap_texture = ExtResource("19_5pu0b")
+uv1_scale = Vector3(0.2, 0.2, 0.2)
+uv1_triplanar = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_40da1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3gfxe"]
+rim_enabled = true
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_bbn12"]
+
+[sub_resource type="Animation" id="Animation_33jqu"]
+resource_name = "pingpong"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/Panel/BalanceGrabber:value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0, -1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_msh7i"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/Panel/BalanceGrabber:value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hbfsv"]
+_data = {
+"RESET": SubResource("Animation_msh7i"),
+"pingpong": SubResource("Animation_33jqu")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bf7i7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6v7lf"]
+texture = ExtResource("24_cvjq0")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Gradient" id="Gradient_0pk2i"]
+offsets = PackedFloat32Array(0, 0.493506, 1)
+colors = PackedColorArray(1, 0, 0, 1, 0, 0.588235, 0, 1, 1, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_m1def"]
+gradient = SubResource("Gradient_0pk2i")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6s7dr"]
+texture = SubResource("GradientTexture1D_m1def")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_slv46"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c2bs6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vn3vy"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ucw0o"]
+load_path = "res://.godot/imported/button_square_depth_flat.png-dc59c8476c0d8bb1ea18252deba6d804.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rykcs"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+texture = SubResource("CompressedTexture2D_ucw0o")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+expand_margin_left = 35.0
+expand_margin_top = 10.0
+expand_margin_right = 35.0
+expand_margin_bottom = 15.0
+modulate_color = Color(0.454524, 0.454524, 0.454524, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7bpso"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4iqxi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p82p1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j2tga"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jqwpm"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_s8m4w"]
+load_path = "res://.godot/imported/button_square_depth_flat.png-dc59c8476c0d8bb1ea18252deba6d804.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_obliq"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+texture = SubResource("CompressedTexture2D_s8m4w")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+expand_margin_left = 35.0
+expand_margin_top = 10.0
+expand_margin_right = 35.0
+expand_margin_bottom = 15.0
+modulate_color = Color(0.650128, 0.650128, 0.650128, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7f7ok"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c308a"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ghuyq"]
+load_path = "res://.godot/imported/button_square_depth_flat.png-dc59c8476c0d8bb1ea18252deba6d804.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dah8s"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+texture = SubResource("CompressedTexture2D_ghuyq")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+expand_margin_left = 35.0
+expand_margin_top = 10.0
+expand_margin_right = 35.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="Animation" id="Animation_op2jm"]
+resource_name = "disco"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DiscoBall:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.5708, 0), Vector3(0, 3.14159, 0), Vector3(0, 4.71239, 0), Vector3(0, 6.28319, 0), Vector3(0, 7.85398, 0), Vector3(0, 9.42478, 0), Vector3(0, 10.9956, 0), Vector3(0, 12.5664, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DiscoBall/SpotLight3D:light_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.03333, 2.03333, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(0, 1, 0, 1), Color(0, 0, 1, 1), Color(0.789932, 0.614147, 0.403316, 1), Color(1, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DiscoBall/SpotLight3D2:light_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.03333, 2.03333, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(0, 1, 0, 1), Color(0, 0, 1, 1), Color(0.788235, 0.615686, 0.403922, 1), Color(1, 0, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MainMenu/MainMenuUI/VBoxContainer/GameTitleLabel:theme_override_colors/font_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.03333, 2.03333, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(0, 1, 0, 1), Color(0, 0, 1, 1), Color(0.788235, 0.615686, 0.403922, 1), Color(1, 0, 0, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("WorldEnvironment:environment:background_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.03333, 2.03333, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.48792, 0.359683, 0.357793, 1), Color(0.32159, 0.423919, 0.382693, 1), Color(0.327072, 0.395045, 0.521025, 1), Color(0.419604, 0.398581, 0.214975, 1), Color(0.48792, 0.359683, 0.357793, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("DiscoBall:surface_material_override/0:metallic")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.85, 0.0, 0.85, 0.0, 0.85, 0.0, 0.85, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_q364u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DiscoBall:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DiscoBall/SpotLight3D:light_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DiscoBall/SpotLight3D2:light_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MainMenu/MainMenuUI/VBoxContainer/GameTitleLabel:theme_override_colors/font_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("WorldEnvironment:environment:background_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.48792, 0.359683, 0.357793, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("DiscoBall:surface_material_override/0:metallic")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pmm50"]
+_data = {
+"RESET": SubResource("Animation_q364u"),
+"disco": SubResource("Animation_op2jm")
+}
+
+[sub_resource type="Animation" id="Animation_3qko6"]
+resource_name = "dissolve"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SplashScreenUI:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.03333, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../MainMenu/MainMenuUI:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5, 7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../MainMenu/MainMenuUI:mouse_filter")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../PlayerStart:active")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.0333333, 3.06667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_58noe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SplashScreenUI:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../MainMenu/MainMenuUI:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../MainMenu/MainMenuUI:mouse_filter")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vwdam"]
+_data = {
+"RESET": SubResource("Animation_58noe"),
+"dissolve": SubResource("Animation_3qko6")
+}
+
+[sub_resource type="Animation" id="Animation_gkbkh"]
+resource_name = "dissolve"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tutorial/TutorialUI:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.03333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_up4f8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tutorial/TutorialUI:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f1wth"]
+_data = {
+"RESET": SubResource("Animation_up4f8"),
+"dissolve": SubResource("Animation_gkbkh")
+}
+
+[sub_resource type="Animation" id="Animation_1bi7v"]
+resource_name = "dissolve"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainMenu/MainMenuUI:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_6oy8g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainMenu/MainMenuUI:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e7sfx"]
+_data = {
+"RESET": SubResource("Animation_6oy8g"),
+"dissolve": SubResource("Animation_1bi7v")
+}
+
+[node name="StartScene" type="Node3D"]
+script = ExtResource("1_q5ynw")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_kvhbq")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 2.55263)
+
+[node name="Room" type="Node3D" parent="."]
+
+[node name="WallBack" type="CSGBox3D" parent="Room"]
+transform = Transform3D(2.98023e-08, 0, 1, 0, 1, 0, -1, 0, 2.98023e-08, -7.47241e-09, 2.05566, -9.74927)
+size = Vector3(0.498535, 3.88867, 20)
+material = SubResource("StandardMaterial3D_7sfe0")
+
+[node name="WallEast" type="CSGBox3D" parent="Room"]
+transform = Transform3D(-1, 0, -1.39091e-08, 0, 1, 0, 1.39091e-08, 0, -1, 10.2285, 2.05566, -0.0126038)
+size = Vector3(0.498535, 3.88867, 19.9809)
+material = SubResource("StandardMaterial3D_7sfe0")
+
+[node name="WallWest" type="CSGBox3D" parent="Room"]
+transform = Transform3D(-1, 0, -1.39091e-08, 0, 1, 0, 1.39091e-08, 0, -1, -9.77148, 2.05566, -0.0126038)
+size = Vector3(0.498535, 3.88867, 19.9809)
+material = SubResource("StandardMaterial3D_7sfe0")
+
+[node name="WallFront" type="CSGBox3D" parent="Room"]
+transform = Transform3D(2.98023e-08, 0, 1, 0, 1, 0, -1, 0, 2.98023e-08, -7.47241e-09, 2.05566, 9.73869)
+size = Vector3(0.498535, 3.88867, 20)
+material = SubResource("StandardMaterial3D_7sfe0")
+
+[node name="Floors" type="Node3D" parent="Room"]
+
+[node name="floor_tiled " parent="Room/Floors" instance=ExtResource("11_t5qgq")]
+
+[node name="floor_tiled 2" parent="Room/Floors" instance=ExtResource("11_t5qgq")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 2, 0, 2)
+
+[node name="floor_tiled 3" parent="Room/Floors" instance=ExtResource("11_t5qgq")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 2, 0, -2)
+
+[node name="floor_tiled 4" parent="Room/Floors" instance=ExtResource("11_t5qgq")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 2, 0, -6)
+
+[node name="floor_tiled 22" parent="Room/Floors" instance=ExtResource("11_t5qgq")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 6, 0, 6)
+
+[node name="floor_tiled 23" parent="Room/Floors" instance=ExtResource("11_t5qgq")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 6, 0, 2)
+
+[node name="floor_tiled 24" parent="Room/Floors" instance=ExtResource("11_t5qgq")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 6, 0, -2)
+
+[node name="floor_tiled 25" parent="Room/Floors" instance=ExtResource("11_t5qgq")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 6, 0, -6)
+
+[node name="floor_tiled 5" parent="Room/Floors" instance=ExtResource("11_t5qgq")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 2, 0, -10)
+
+[node name="floor_tiled 6" parent="Room/Floors" instance=ExtResource("11_t5qgq")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 6, 0, -10)
+
+[node name="floor_tiled 7" parent="Room/Floors" instance=ExtResource("11_t5qgq")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 10, 0, -10)
+
+[node name="floor_tiled 8" parent="Room/Floors" instance=ExtResource("11_t5qgq")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 10, 0, -6)
+
+[node name="floor_tiled 9" parent="Room/Floors" instance=ExtResource("11_t5qgq")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 10, 0, -2)
+
+[node name="floor_tiled 10" parent="Room/Floors" instance=ExtResource("11_t5qgq")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 10, 0, 2)
+
+[node name="floor_tiled 11" parent="Room/Floors" instance=ExtResource("11_t5qgq")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 10, 0, 6)
+
+[node name="floor_tiled 12" parent="Room/Floors" instance=ExtResource("11_t5qgq")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, -2, 0, -10)
+
+[node name="floor_tiled 13" parent="Room/Floors" instance=ExtResource("11_t5qgq")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, -2, 0, -6)
+
+[node name="floor_tiled 14" parent="Room/Floors" instance=ExtResource("11_t5qgq")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, -2, 0, -2)
+
+[node name="floor_tiled 15" parent="Room/Floors" instance=ExtResource("11_t5qgq")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, -2, 0, 2)
+
+[node name="floor_tiled 16" parent="Room/Floors" instance=ExtResource("11_t5qgq")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, -2, 0, 6)
+
+[node name="floor_tiled 17" parent="Room/Floors" instance=ExtResource("11_t5qgq")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, -6, 0, -10)
+
+[node name="floor_tiled 18" parent="Room/Floors" instance=ExtResource("11_t5qgq")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, -6, 0, -6)
+
+[node name="floor_tiled 19" parent="Room/Floors" instance=ExtResource("11_t5qgq")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, -6, 0, -2)
+
+[node name="floor_tiled 20" parent="Room/Floors" instance=ExtResource("11_t5qgq")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, -6, 0, 2)
+
+[node name="floor_tiled 21" parent="Room/Floors" instance=ExtResource("11_t5qgq")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, -6, 0, 6)
+
+[node name="Props" type="Node3D" parent="Room"]
+
+[node name="DoubleBooth" parent="Room/Props" instance=ExtResource("17_j3my7")]
+transform = Transform3D(-0.514395, 0, 4.49698e-08, 0, 0.0726332, 0, -4.49698e-08, 0, -0.514395, -5.1608, 0.0833178, -4)
+
+[node name="DoubleBooth2" parent="Room/Props" instance=ExtResource("17_j3my7")]
+transform = Transform3D(-0.514395, 0, 4.49698e-08, 0, 0.0726332, 0, -4.49698e-08, 0, -0.514395, -4.89658, 0.0833178, 0.24896)
+
+[node name="fridge" parent="Room/Props" instance=ExtResource("18_gtnwm")]
+transform = Transform3D(0.9, 0, 3.55271e-15, 0, 0.9, 0, 0, 0, 0.892, 8.3241, 0, -9.8448)
+
+[node name="CounterLong1" parent="Room/Props" instance=ExtResource("19_rwd16")]
+transform = Transform3D(-2.8701e-08, 0, 1, 0, 1, 0, -0.656602, 0, -4.37114e-08, 6, 0, -5)
+
+[node name="CounterLong2" parent="Room/Props" instance=ExtResource("20_3ql58")]
+transform = Transform3D(-2.8701e-08, 0, 1, 0, 1, 0, -0.656602, 0, -4.37114e-08, 2, 0, -5)
+
+[node name="CounterMed" parent="Room/Props" instance=ExtResource("21_tlxty")]
+transform = Transform3D(0.656602, 0, 0, 0, 1, 0, 0, 0, 1, 1.16638, 0.0383794, -9.01273)
+
+[node name="Tabouret2" parent="Room/Props" instance=ExtResource("22_32vdu")]
+transform = Transform3D(0.281067, 0, 0, 0, 0.281067, 0, 0, 0, 0.281067, 8.49731, 0.382546, -4.40007)
+
+[node name="Tabouret3" parent="Room/Props" instance=ExtResource("22_32vdu")]
+transform = Transform3D(0.281067, 0, 0, 0, 0.281067, 0, 0, 0, 0.281067, 7.49731, 0.382546, -4.40007)
+
+[node name="Tabouret4" parent="Room/Props" instance=ExtResource("22_32vdu")]
+transform = Transform3D(0.281067, 0, 0, 0, 0.281067, 0, 0, 0, 0.281067, 6.49731, 0.382546, -4.40007)
+
+[node name="Tabouret5" parent="Room/Props" instance=ExtResource("22_32vdu")]
+transform = Transform3D(0.281067, 0, 0, 0, 0.281067, 0, 0, 0, 0.281067, 5.49731, 0.382546, -4.40007)
+
+[node name="Tabouret6" parent="Room/Props" instance=ExtResource("22_32vdu")]
+transform = Transform3D(0.281067, 0, 0, 0, 0.281067, 0, 0, 0, 0.281067, 4.49731, 0.382546, -4.40007)
+
+[node name="Tabouret7" parent="Room/Props" instance=ExtResource("22_32vdu")]
+transform = Transform3D(0.281067, 0, 0, 0, 0.281067, 0, 0, 0, 0.281067, 3.49731, 0.382546, -4.40007)
+
+[node name="Tabouret8" parent="Room/Props" instance=ExtResource("22_32vdu")]
+transform = Transform3D(0.281067, 0, 0, 0, 0.281067, 0, 0, 0, 0.281067, 2.49731, 0.382546, -4.40007)
+
+[node name="Fryer" parent="Room/Props" instance=ExtResource("23_d5iky")]
+transform = Transform3D(0.0180969, 1.36628e-09, 1.62874e-16, 6.13147e-23, 2.15732e-09, -0.0180969, -1.36628e-09, 0.0180969, 2.15732e-09, 4, 0, -10)
+
+[node name="Griddle" parent="Room/Props" instance=ExtResource("24_thdhg")]
+transform = Transform3D(0.0180969, 2.15732e-09, -9.42995e-17, -1.04747e-23, -7.91041e-10, -0.0180969, -2.15732e-09, 0.0180969, -7.91041e-10, 6, 0, -10)
+
+[node name="TableLong" parent="Room/Props" instance=ExtResource("25_nr7j1")]
+transform = Transform3D(0.388301, 0, 0, 0, 0.388301, 0, 0, 0, 0.388301, -6.16138, 0.579498, -2.60783)
+
+[node name="TableLong3" parent="Room/Props" instance=ExtResource("25_nr7j1")]
+transform = Transform3D(0.388301, 0, 0, 0, 0.388301, 0, 0, 0, 0.388301, -8.1045, 0.579498, 2.01272)
+
+[node name="TableLong4" parent="Room/Props" instance=ExtResource("25_nr7j1")]
+transform = Transform3D(0.388301, 0, 0, 0, 0.388301, 0, 0, 0, 0.388301, -6.4256, 0.579498, -7.98728)
+
+[node name="DoubleBooth3" parent="Room/Props" instance=ExtResource("17_j3my7")]
+transform = Transform3D(-0.514395, 0, 4.49698e-08, 0, 0.0726332, 0, -4.49698e-08, 0, -0.514395, -6.8397, 0.0833178, 5)
+
+[node name="DoubleBooth4" parent="Room/Props" instance=ExtResource("17_j3my7")]
+transform = Transform3D(-0.514395, 0, 4.49698e-08, 0, 0.0726332, 0, -4.49698e-08, 0, -0.514395, -6.8397, 0.0833178, 9.24896)
+
+[node name="TableLong2" parent="Room/Props" instance=ExtResource("25_nr7j1")]
+transform = Transform3D(0.388301, 0, 0, 0, 0.388301, 0, 0, 0, 0.388301, -8.1045, 0.579498, 6.39217)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Room"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.228516, 4.1741, -0.019165)
+size = Vector3(20.543, 0.29834, 19.9268)
+material = SubResource("StandardMaterial3D_gstvx")
+metadata/_edit_group_ = true
+
+[node name="PlayerStart" parent="." instance=ExtResource("26_hohwi")]
+transform = Transform3D(1.27135, 0, 0.796033, 0, 1.5, 0, -0.796033, 0, 1.27135, -1.32251, 0.101637, -0.342348)
+
+[node name="DiscoBall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.86738, 4.16471, -4.47917)
+mesh = SubResource("SphereMesh_40da1")
+surface_material_override/0 = SubResource("StandardMaterial3D_3gfxe")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="DiscoBall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.38419e-06, -0.277746, -0.375547)
+light_color = Color(1, 0, 0, 1)
+light_energy = 3.0
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="DiscoBall"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.277746, 0.368413)
+light_energy = 3.0
+
+[node name="SplashScreen" type="CanvasLayer" parent="."]
+
+[node name="SplashScreenUI" type="Control" parent="SplashScreen"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Background" type="TextureRect" parent="SplashScreen/SplashScreenUI"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_bbn12")
+
+[node name="SplashLogo" type="TextureRect" parent="SplashScreen/SplashScreenUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -221.0
+offset_top = -110.0
+offset_right = 654.0
+offset_bottom = 190.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("21_yk0t7")
+
+[node name="Tutorial" type="CanvasLayer" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Tutorial"]
+root_node = NodePath("../TutorialUI")
+libraries = {
+"": SubResource("AnimationLibrary_hbfsv")
+}
+autoplay = "pingpong"
+
+[node name="TutorialUI" type="Control" parent="Tutorial"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Background" type="TextureRect" parent="Tutorial/TutorialUI"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_bbn12")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tutorial/TutorialUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -206.0
+offset_top = -82.0
+offset_right = 206.0
+offset_bottom = 82.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 35
+
+[node name="BalanceInfo" type="Label" parent="Tutorial/TutorialUI/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.417603, 0.755751, 1)
+theme_override_colors/font_outline_color = Color(0.353615, 0.517463, 0.679332, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("27_frrse")
+theme_override_font_sizes/font_size = 24
+text = "Press A or D to keep your balance"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="Tutorial/TutorialUI/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_bf7i7")
+
+[node name="ProgressBar" type="ProgressBar" parent="Tutorial/TutorialUI/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = -1.0
+offset_right = -12.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxTexture_6v7lf")
+theme_override_styles/fill = SubResource("StyleBoxTexture_6s7dr")
+value = 100.0
+show_percentage = false
+
+[node name="BalanceGrabber" type="HSlider" parent="Tutorial/TutorialUI/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -20.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_icons/grabber = ExtResource("25_63exu")
+theme_override_icons/grabber_highlight = ExtResource("25_63exu")
+theme_override_icons/grabber_disabled = ExtResource("25_63exu")
+theme_override_styles/slider = SubResource("StyleBoxEmpty_slv46")
+theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_c2bs6")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxEmpty_vn3vy")
+min_value = -1.0
+max_value = 1.0
+step = 0.001
+editable = false
+scrollable = false
+
+[node name="HSeparator" type="HSeparator" parent="Tutorial/TutorialUI/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 1
+
+[node name="JumpInfo" type="Label" parent="Tutorial/TutorialUI/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.417603, 0.755751, 1)
+theme_override_colors/font_outline_color = Color(0.353615, 0.517463, 0.679332, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("27_frrse")
+theme_override_font_sizes/font_size = 24
+text = "Press Space to Jump"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="MainMenu" type="CanvasLayer" parent="."]
+
+[node name="MainMenuUI" type="Control" parent="MainMenu"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/MainMenuUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.0
+offset_top = -161.0
+offset_right = 356.0
+offset_bottom = -51.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="GameTitleLabel" type="Label" parent="MainMenu/MainMenuUI/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("27_frrse")
+theme_override_font_sizes/font_size = 50
+text = "Serve and Dash"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayButton" type="Button" parent="MainMenu/MainMenuUI/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/focus = SubResource("StyleBoxTexture_rykcs")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_7bpso")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4iqxi")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_p82p1")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_j2tga")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_jqwpm")
+theme_override_styles/hover = SubResource("StyleBoxTexture_obliq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_7f7ok")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rykcs")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_c308a")
+theme_override_styles/normal = SubResource("StyleBoxTexture_dah8s")
+
+[node name="Label" type="Label" parent="MainMenu/MainMenuUI/VBoxContainer/PlayButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.0
+offset_top = -18.5
+offset_right = 34.0
+offset_bottom = 18.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("27_frrse")
+theme_override_font_sizes/font_size = 30
+text = "Play"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayerDisco" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_pmm50")
+}
+autoplay = "disco"
+
+[node name="AnimationPlayerSplash" type="AnimationPlayer" parent="."]
+root_node = NodePath("../SplashScreen")
+libraries = {
+"": SubResource("AnimationLibrary_vwdam")
+}
+autoplay = "dissolve"
+
+[node name="AnimationPlayerTut" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_f1wth")
+}
+
+[node name="AnimationPlayerMainMenu" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_e7sfx")
+}
+
+[node name="BackgroundMusic" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("23_rqc57")
+volume_db = -10.0
+autoplay = true
+
+[connection signal="pressed" from="MainMenu/MainMenuUI/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]

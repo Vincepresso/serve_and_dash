@@ -1,0 +1,78 @@
+[gd_scene load_steps=5 format=3 uid="uid://cdklaquxlvr2j"]
+
+[ext_resource type="Script" path="res://common/camera/camera.gd" id="1_ncu70"]
+
+[sub_resource type="Animation" id="Animation_24ayo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpringArm3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpringArm3D/Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.0801804, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_k5ler"]
+resource_name = "slide_up"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpringArm3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 2, -3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpringArm3D/Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.0801804, 0, 0), Vector3(-0.34198, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pf0wl"]
+_data = {
+"RESET": SubResource("Animation_24ayo"),
+"slide_up": SubResource("Animation_k5ler")
+}
+
+[node name="Camera" type="Node3D" groups=["camera"]]
+script = ExtResource("1_ncu70")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="."]
+spring_length = 2.0
+margin = 0.5
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
+transform = Transform3D(1, 0, 0, 0, 0.996787, 0.0800945, 0, -0.0800945, 0.996787, 0, 0, 1.94107)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_pf0wl")
+}

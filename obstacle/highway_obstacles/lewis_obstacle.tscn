@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://clr47lw6cml1p"]
+
+[ext_resource type="PackedScene" uid="uid://doqv5uax0pk2" path="res://obstacle/obstacle.tscn" id="1_aknim"]
+[ext_resource type="PackedScene" uid="uid://beko7p48i3ewq" path="res://entities/character/lewis.tscn" id="2_c7d2l"]
+
+[node name="LewisObstacle" instance=ExtResource("1_aknim")]
+
+[node name="Lewis" parent="." index="0" instance=ExtResource("2_c7d2l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)

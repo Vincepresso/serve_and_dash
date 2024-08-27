@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dddfcstlsl1ms"]
+
+[ext_resource type="Script" path="res://common/game_manager/game_manager.gd" id="1_io63t"]
+
+[node name="GameManager" type="Node"]
+script = ExtResource("1_io63t")
+
+[node name="DifficultyIncreaseTimer" type="Timer" parent="."]
+wait_time = 5.0
+
+[connection signal="timeout" from="DifficultyIncreaseTimer" to="." method="_on_difficulty_increase_timer_timeout"]

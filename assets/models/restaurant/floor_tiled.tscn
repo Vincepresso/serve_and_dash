@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=4 uid="uid://y8kse8lo2hv6"]
+
+[ext_resource type="Texture2D" uid="uid://pyety4t4kjqr" path="res://assets/models/restaurant/textures/restaurant_tiles_0021_color_1k.jpg" id="1_po10y"]
+[ext_resource type="Texture2D" uid="uid://bn4mpf6ix3ldq" path="res://assets/models/restaurant/textures/restaurant_tiles_0021_roughness_1k.png" id="2_8letp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6d256"]
+resource_name = "tiles"
+cull_mode = 2
+albedo_texture = ExtResource("1_po10y")
+metallic_texture = ExtResource("2_8letp")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_8letp")
+roughness_texture_channel = 1
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xcjla"]
+_surfaces = [{
+"aabb": AABB(-2, 0, 0, 2, 0.1, 2),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAADAAIAAAABAAMABQAHAAYABQAEAAcAAQAHAAMAAQAGAAcAAgAFAAAAAgAEAAUAAwAEAAIAAwAHAAQAAAAGAAEAAAAFAAYA"),
+"name": "tiles",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAwAAAAAAAAABAAACAMwAAAAAAAABAAAAAwAAAAAAAAACAAACAMwAAAAAAAACAAAAAwM3MzD0AAACAAAAAwM3MzD0AAABAAACAM83MzD0AAABAAACAM83MzD0AAACA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_x7n27"]
+resource_name = "restaurant_Plane"
+_surfaces = [{
+"aabb": AABB(-2, 0, 0, 2, 0.1, 2),
+"attribute_data": PackedByteArray("AAAAAAAAgD8AAAAAAACAPwAAAAAAAIA/AACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAAAAAAIA/AAAAAAAAgD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgD8AAAAAAACAPwAAAAAAAIA/AACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AACAPwAAAAAAAIA/AAAAAAAAgD8AAAAA"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AQAJAAcAAQADAAkAEQAWABMAEQAOABYABQAXAAsABQAUABcABgAPAAAABgAMAA8ACgANAAgACgAVAA0AAgASAAQAAgAQABIA"),
+"material": SubResource("StandardMaterial3D_6d256"),
+"name": "tiles",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAwAAAAAAAAABAAAAAwAAAAAAAAABAAAAAwAAAAAAAAABAAACAMwAAAAAAAABAAACAMwAAAAAAAABAAACAMwAAAAAAAABAAAAAwAAAAAAAAACAAAAAwAAAAAAAAACAAAAAwAAAAAAAAACAAACAMwAAAAAAAACAAACAMwAAAAAAAACAAACAMwAAAAAAAACAAAAAwM3MzD0AAACAAAAAwM3MzD0AAACAAAAAwM3MzD0AAACAAAAAwM3MzD0AAABAAAAAwM3MzD0AAABAAAAAwM3MzD0AAABAAACAM83MzD0AAABAAACAM83MzD0AAABAAACAM83MzD0AAABAAACAM83MzD0AAACAAACAM83MzD0AAACAAACAM83MzD0AAACAAAD/f////7//fwAA////P/9//3////8//38AAP///z//f/9/////P////3////+/AAD/f////7//fwAA////P/////////+//38AAP///z//////////v////3////+/AAD/f////7//////////v/9///////+/AAD/f////7//f/9/////P/9///////+//3//f////z//f///////v////3////+//////////7//f///////v////3////+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_xcjla")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_q20vb"]
+data = PackedVector3Array(-2, 0, 2, 5.96046e-08, 0, 0, -2, 0, 0, -2, 0, 2, 5.96046e-08, 0, 2, 5.96046e-08, 0, 0, -2, 0.1, 2, 5.96046e-08, 0.1, 0, 5.96046e-08, 0.1, 2, -2, 0.1, 2, -2, 0.1, 0, 5.96046e-08, 0.1, 0, 5.96046e-08, 0, 2, 5.96046e-08, 0.1, 0, 5.96046e-08, 0, 0, 5.96046e-08, 0, 2, 5.96046e-08, 0.1, 2, 5.96046e-08, 0.1, 0, -2, 0, 0, -2, 0.1, 2, -2, 0, 2, -2, 0, 0, -2, 0.1, 0, -2, 0.1, 2, 5.96046e-08, 0, 0, -2, 0.1, 0, -2, 0, 0, 5.96046e-08, 0, 0, 5.96046e-08, 0.1, 0, -2, 0.1, 0, -2, 0, 2, 5.96046e-08, 0.1, 2, 5.96046e-08, 0, 2, -2, 0, 2, -2, 0.1, 2, 5.96046e-08, 0.1, 2)
+
+[node name="floor_tiled " type="MeshInstance3D"]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 2, 0, 6)
+mesh = SubResource("ArrayMesh_x7n27")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_q20vb")

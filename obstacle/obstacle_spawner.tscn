@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlg85xx6rp7qo"]
+
+[ext_resource type="Script" path="res://obstacle/obstacle_spawner.gd" id="1_ypawr"]
+[ext_resource type="PackedScene" uid="uid://btbr8wutkle0v" path="res://obstacle/playground_obstacle/playground_obstacle.tscn" id="2_cy5ot"]
+
+[node name="ObstacleSpawner" type="Node3D"]
+script = ExtResource("1_ypawr")
+obstacle_list = Array[PackedScene]([ExtResource("2_cy5ot")])

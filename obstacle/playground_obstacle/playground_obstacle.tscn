@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://btbr8wutkle0v"]
+
+[ext_resource type="PackedScene" uid="uid://doqv5uax0pk2" path="res://obstacle/obstacle.tscn" id="1_4do5r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_np4wc"]
+size = Vector3(5, 0.25, 0.25)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qobwt"]
+albedo_color = Color(0.657517, 5.29438e-07, 0.380865, 1)
+
+[node name="PlaygroundObstacle" instance=ExtResource("1_4do5r")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, 0)
+shape = SubResource("BoxShape3D_np4wc")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, 0)
+size = Vector3(5, 0.25, 0.25)
+material = SubResource("StandardMaterial3D_qobwt")

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://xh04br5aj8gu"]
+
+[ext_resource type="PackedScene" uid="uid://doqv5uax0pk2" path="res://obstacle/obstacle.tscn" id="1_si6b2"]
+[ext_resource type="PackedScene" uid="uid://8hm6a78xbphn" path="res://assets/models/nature/Rock_Medium_1.gltf" id="2_vwnxs"]
+[ext_resource type="PackedScene" uid="uid://b16f5kw43hwi4" path="res://assets/models/nature/Rock_Medium_2.gltf" id="3_pfouy"]
+
+[node name="Rocks" instance=ExtResource("1_si6b2")]
+
+[node name="Visual" type="Node3D" parent="." index="0"]
+
+[node name="Rock_Medium_12" parent="Visual" index="0" instance=ExtResource("2_vwnxs")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -2.02047, 0, 0)
+
+[node name="Rock_Medium_13" parent="Visual" index="1" instance=ExtResource("2_vwnxs")]
+transform = Transform3D(-0.0155888, 0, -0.249514, 0, 0.25, 0, 0.249514, 0, -0.0155888, -1.21291, 0, 0)
+
+[node name="Rock_Medium_14" parent="Visual" index="2" instance=ExtResource("2_vwnxs")]
+transform = Transform3D(-0.157957, 0, -0.193777, 0, 0.25, 0, 0.193777, 0, -0.157957, -0.506427, 0, 0)
+
+[node name="Rock_Medium_22" parent="Visual" index="3" instance=ExtResource("3_pfouy")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.313917, 0, -0.0610921)
+
+[node name="Rock_Medium_23" parent="Visual" index="4" instance=ExtResource("3_pfouy")]
+transform = Transform3D(0.102274, 0, -0.228123, 0, 0.25, 0, 0.228123, 0, 0.102274, 1.08335, 0, -0.0610921)
+
+[node name="Rock_Medium_24" parent="Visual" index="5" instance=ExtResource("3_pfouy")]
+transform = Transform3D(0.168305, 0, -0.184861, 0, 0.25, 0, 0.184861, 0, 0.168305, 1.94225, 0, -0.0610921)

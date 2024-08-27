@@ -1,0 +1,32 @@
+[gd_scene load_steps=9 format=3 uid="uid://b3ea3o08a0ccb"]
+
+[ext_resource type="PackedScene" uid="uid://tl2tbw5anxh1" path="res://common/environment/world_environment.tscn" id="1_t1i3s"]
+[ext_resource type="PackedScene" uid="uid://dpkdyo18xbq66" path="res://common/environment/sun.tscn" id="2_sn6ej"]
+[ext_resource type="PackedScene" uid="uid://dce4fxn8josf4" path="res://ui/hud/hud.tscn" id="3_rsc44"]
+[ext_resource type="PackedScene" uid="uid://bbncsuvwvi3px" path="res://ui/game_over/game_over.tscn" id="4_7m6rh"]
+[ext_resource type="PackedScene" uid="uid://c3hdeer2vityu" path="res://map/section/section_spawner.tscn" id="4_rr85w"]
+[ext_resource type="PackedScene" uid="uid://qwq5gdgfabdf" path="res://map/section/section_parts/highway_section_01.tscn" id="5_v6bba"]
+[ext_resource type="PackedScene" uid="uid://c80v17p8mc8fu" path="res://entities/player/player.tscn" id="6_c7dlw"]
+[ext_resource type="PackedScene" uid="uid://cdklaquxlvr2j" path="res://common/camera/camera.tscn" id="7_le001"]
+
+[node name="Highway" type="Node3D" groups=["map"]]
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("1_t1i3s")]
+
+[node name="Sun" parent="." instance=ExtResource("2_sn6ej")]
+transform = Transform3D(-0.804054, -0.0498322, 0.592464, 0.488173, -0.62415, 0.61002, 0.339387, 0.779714, 0.526177, 0, 4.07919, 0)
+
+[node name="Hud" parent="." instance=ExtResource("3_rsc44")]
+
+[node name="GameOver" parent="." instance=ExtResource("4_7m6rh")]
+
+[node name="SectionSpawner" parent="." instance=ExtResource("4_rr85w")]
+section_parts = Array[PackedScene]([ExtResource("5_v6bba")])
+
+[node name="Camera" parent="." node_paths=PackedStringArray("follow_target") instance=ExtResource("7_le001")]
+follow_target = NodePath("../Player/CameraMountLocation")
+
+[node name="Player" parent="." instance=ExtResource("6_c7dlw")]
+
+[editable path="Player"]
+[editable path="Player/Visual/Roth"]

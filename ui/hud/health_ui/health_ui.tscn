@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmtc7vag2nnu8"]
+
+[ext_resource type="Script" path="res://ui/hud/health_ui/health_ui.gd" id="1_2hmf4"]
+[ext_resource type="Texture2D" uid="uid://dp4as7o0b8500" path="res://assets/textures/ui/heart.svg" id="1_vp034"]
+
+[node name="HealthUI" type="Control"]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 53.0
+grow_horizontal = 2
+scale = Vector2(1.5, 1.5)
+mouse_filter = 2
+script = ExtResource("1_2hmf4")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 19.0
+offset_top = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="HealthTexture1" type="TextureRect" parent="HBoxContainer"]
+modulate = Color(0.974354, 0, 0.0892041, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_vp034")
+
+[node name="HealthTexture2" type="TextureRect" parent="HBoxContainer"]
+modulate = Color(0.972549, 0, 0.0901961, 1)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("1_vp034")

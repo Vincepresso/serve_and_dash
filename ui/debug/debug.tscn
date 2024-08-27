@@ -1,0 +1,114 @@
+[gd_scene load_steps=3 format=3 uid="uid://boxya7cpixwk4"]
+
+[ext_resource type="Script" path="res://ui/debug/debug.gd" id="1_3ssj6"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_xgr7q"]
+color = Color(1, 1, 1, 1)
+thickness = 3
+
+[node name="Debug" type="CanvasLayer"]
+layer = -100
+script = ExtResource("1_3ssj6")
+
+[node name="DebugControl" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DebugControl"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GameStateLabel" type="Label" parent="DebugControl/VBoxContainer"]
+layout_mode = 2
+text = "GameState Debug"
+
+[node name="GameStateGrid" type="GridContainer" parent="DebugControl/VBoxContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="StartRunLabel" type="Label" parent="DebugControl/VBoxContainer/GameStateGrid"]
+layout_mode = 2
+text = "start_run"
+
+[node name="StartRunValue" type="Label" parent="DebugControl/VBoxContainer/GameStateGrid"]
+layout_mode = 2
+text = "XXXX"
+
+[node name="StartRunToggle" type="Button" parent="DebugControl/VBoxContainer/GameStateGrid"]
+layout_mode = 2
+text = "Toggle"
+
+[node name="HealthLabel" type="Label" parent="DebugControl/VBoxContainer/GameStateGrid"]
+layout_mode = 2
+text = "health"
+
+[node name="HealthValue" type="Label" parent="DebugControl/VBoxContainer/GameStateGrid"]
+layout_mode = 2
+text = "XXX"
+
+[node name="HealthButton" type="Button" parent="DebugControl/VBoxContainer/GameStateGrid"]
+layout_mode = 2
+text = "Hurt"
+
+[node name="PlayerSpeedLabel" type="Label" parent="DebugControl/VBoxContainer/GameStateGrid"]
+layout_mode = 2
+text = "player_speed"
+
+[node name="PlayerSpeedValue" type="Label" parent="DebugControl/VBoxContainer/GameStateGrid"]
+layout_mode = 2
+text = "XXX"
+
+[node name="PlayerSpeedPlaceholder" type="Label" parent="DebugControl/VBoxContainer/GameStateGrid"]
+layout_mode = 2
+text = "
+"
+
+[node name="ObstacleSpawnChanceLabel" type="Label" parent="DebugControl/VBoxContainer/GameStateGrid"]
+layout_mode = 2
+text = "obstalce_spawn_chance"
+
+[node name="ObstacleSpawnChanceValue" type="Label" parent="DebugControl/VBoxContainer/GameStateGrid"]
+layout_mode = 2
+text = "XXXX"
+
+[node name="ObstacleSpawnChancePlaceholder" type="Label" parent="DebugControl/VBoxContainer/GameStateGrid"]
+layout_mode = 2
+
+[node name="ReleaseTrayButton" type="Button" parent="DebugControl/VBoxContainer/GameStateGrid"]
+layout_mode = 2
+text = "Release Tray
+"
+
+[node name="ReleaseTrayPlaceholder1" type="Label" parent="DebugControl/VBoxContainer/GameStateGrid"]
+layout_mode = 2
+
+[node name="ReleaseTrayPlaceholder2" type="Label" parent="DebugControl/VBoxContainer/GameStateGrid"]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="DebugControl/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_xgr7q")
+
+[node name="SystemLabel" type="Label" parent="DebugControl/VBoxContainer"]
+layout_mode = 2
+text = "System"
+
+[node name="SystemGrid" type="GridContainer" parent="DebugControl/VBoxContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="FPSLabel" type="Label" parent="DebugControl/VBoxContainer/SystemGrid"]
+layout_mode = 2
+text = "FPS"
+
+[node name="FPSValue" type="Label" parent="DebugControl/VBoxContainer/SystemGrid"]
+layout_mode = 2
+
+[connection signal="pressed" from="DebugControl/VBoxContainer/GameStateGrid/StartRunToggle" to="." method="_on_start_run_toggle_pressed"]
+[connection signal="pressed" from="DebugControl/VBoxContainer/GameStateGrid/HealthButton" to="." method="_on_health_button_pressed"]
+[connection signal="pressed" from="DebugControl/VBoxContainer/GameStateGrid/ReleaseTrayButton" to="." method="_on_release_tray_button_pressed"]

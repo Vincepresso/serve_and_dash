@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxpxxwht3o3lj"]
+
+[ext_resource type="PackedScene" uid="uid://dle53jd788vxg" path="res://assets/models/construction_worker/construction_worker.glb" id="1_bbfvp"]
+[ext_resource type="Script" path="res://entities/character/character.gd" id="1_h7t2o"]
+[ext_resource type="AnimationLibrary" uid="uid://b5n0agqdr64pe" path="res://assets/anims/humanoid_poses.glb" id="2_oatja"]
+
+[node name="ConstructionWorker" type="Node3D"]
+script = ExtResource("1_h7t2o")
+
+[node name="Visual" type="Node3D" parent="."]
+
+[node name="construction_worker" parent="Visual" instance=ExtResource("1_bbfvp")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Visual/construction_worker")
+libraries = {
+"humanoid_poses": ExtResource("2_oatja")
+}
