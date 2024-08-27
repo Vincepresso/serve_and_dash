@@ -28,5 +28,11 @@ follow_target = NodePath("../Player/CameraMountLocation")
 
 [node name="Player" parent="." instance=ExtResource("6_c7dlw")]
 
+[node name="BoneAttachmentHips" parent="Player/Visual/Roth/roth/GeneralSkeleton" index="6"]
+transform = Transform3D(1, 1.96956e-06, 4.46545e-08, -1.96956e-06, 1, -3.26894e-07, -4.46551e-08, 3.26894e-07, 1, 6.07006e-08, 0.989827, 0.0147544)
+
+[node name="BoneAttachmentLeftHand" parent="Player/Visual/Roth/roth/GeneralSkeleton" index="7"]
+transform = Transform3D(-2.76331e-07, 1, 1.55534e-06, 3.40865e-07, 1.55534e-06, -1, -1, -2.76331e-07, -3.40866e-07, 0.654485, 1.39418, -0.018955)
+
 [editable path="Player"]
 [editable path="Player/Visual/Roth"]

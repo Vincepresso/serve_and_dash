@@ -239,7 +239,7 @@ bone_name = "LeftHand"
 bone_idx = 10
 
 [node name="Tray" parent="Visual/Roth/roth/GeneralSkeleton/BoneAttachmentLeftHand" instance=ExtResource("3_ur3hw")]
-transform = Transform3D(-0.99595, 0.086775, 0.0235469, 0.0345092, 0.127083, 0.991292, 0.083027, 0.988089, -0.129562, -0.0147339, 0.0844148, 0.0674089)
+transform = Transform3D(-0.995951, 0.086775, 0.0235469, 0.0345092, 0.127083, 0.991292, 0.0830269, 0.988088, -0.129562, -0.00704628, 0.0496727, 0.0674088)
 
 [node name="Hitbox" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.944695, 0)

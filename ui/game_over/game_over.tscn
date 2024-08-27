@@ -1,8 +1,81 @@
-[gd_scene load_steps=2 format=3 uid="uid://bbncsuvwvi3px"]
+[gd_scene load_steps=17 format=3 uid="uid://bbncsuvwvi3px"]
 
+[ext_resource type="Script" path="res://ui/game_over/game_over.gd" id="1_7bbgu"]
 [ext_resource type="Script" path="res://ui/game_over/game_over_ui.gd" id="1_tl7jb"]
+[ext_resource type="FontFile" uid="uid://dwunqesbfeshs" path="res://assets/fonts/Rubik-Black.ttf" id="2_fl3b1"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ucw0o"]
+load_path = "res://.godot/imported/button_square_depth_flat.png-dc59c8476c0d8bb1ea18252deba6d804.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tfsls"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+texture = SubResource("CompressedTexture2D_ucw0o")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+expand_margin_left = 40.0
+expand_margin_top = 10.0
+expand_margin_right = 40.0
+expand_margin_bottom = 15.0
+modulate_color = Color(0.454524, 0.454524, 0.454524, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_576le"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_262ld"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l7vg5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vpius"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iqi0k"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_s8m4w"]
+load_path = "res://.godot/imported/button_square_depth_flat.png-dc59c8476c0d8bb1ea18252deba6d804.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fjnd8"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+texture = SubResource("CompressedTexture2D_s8m4w")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+expand_margin_left = 40.0
+expand_margin_top = 10.0
+expand_margin_right = 40.0
+expand_margin_bottom = 15.0
+modulate_color = Color(0.650128, 0.650128, 0.650128, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mu6xo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8xf3i"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ghuyq"]
+load_path = "res://.godot/imported/button_square_depth_flat.png-dc59c8476c0d8bb1ea18252deba6d804.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mi8n2"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+texture = SubResource("CompressedTexture2D_ghuyq")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+expand_margin_left = 40.0
+expand_margin_top = 10.0
+expand_margin_right = 40.0
+expand_margin_bottom = 15.0
 
 [node name="GameOver" type="CanvasLayer"]
+script = ExtResource("1_7bbgu")
 
 [node name="GameOverUI" type="Control" parent="."]
 layout_mode = 3
@@ -13,13 +86,70 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tl7jb")
 
-[node name="GameOverLabel" type="Label" parent="GameOverUI"]
+[node name="VBoxContainer" type="VBoxContainer" parent="GameOverUI"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.5
+offset_top = -44.5
+offset_right = 126.5
+offset_bottom = 44.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="GameOverLabel" type="Label" parent="GameOverUI/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 0.417603, 0.755751, 1)
+theme_override_colors/font_outline_color = Color(0.353615, 0.517463, 0.679332, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_fl3b1")
+theme_override_font_sizes/font_size = 45
 text = "Game Over"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="RetryButton" type="Button" parent="GameOverUI/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/focus = SubResource("StyleBoxTexture_tfsls")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_576le")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_262ld")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_l7vg5")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_vpius")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_iqi0k")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fjnd8")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_mu6xo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tfsls")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_8xf3i")
+theme_override_styles/normal = SubResource("StyleBoxTexture_mi8n2")
+
+[node name="Label" type="Label" parent="GameOverUI/VBoxContainer/RetryButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.0
+offset_top = -18.5
+offset_right = 34.0
+offset_bottom = 18.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_fl3b1")
+theme_override_font_sizes/font_size = 30
+text = "Retry"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="GameOverUI/VBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]

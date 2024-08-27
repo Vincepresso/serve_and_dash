@@ -23,6 +23,7 @@ func _ready() -> void:
 	animation_tree.set("parameters/state_machine/conditions/run", true)
 	GameState.player_health = health
 	tray.freeze = true
+	GameState.start_run = true
 
 func _physics_process(delta: float) -> void:
 	handle_movement()

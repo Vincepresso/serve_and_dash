@@ -11,14 +11,16 @@ config_version=5
 [application]
 
 config/name="serve_and_dash"
-run/main_scene="res://map/highway/highway.tscn"
+run/main_scene="res://map/start_scene/start_scene.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/show_image=false
+config/icon="res://assets/textures/misc/icon.png"
 
 [autoload]
 
 GameState="*res://common/game_state/game_state.tscn"
 GameManager="*res://common/game_manager/game_manager.tscn"
+SceneTransition="*res://common/scene_transition/scene_transition.tscn"
 
 [display]
 
@@ -59,5 +61,4 @@ updater/show_new_release_info_on_editor_launch_in_output=false
 
 [physics]
 
-3d/physics_engine="JoltPhysics3D"
 common/physics_interpolation=true
