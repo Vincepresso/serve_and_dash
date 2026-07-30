@@ -3,10 +3,11 @@
 > **A fast-paced game/application centered around high-speed serving, dashing mechanics, and time management.**
 
 [![Play on itch.io](https://img.shields.io/badge/Play%20on-itch.io-FA5C5C?style=for-the-badge&logo=itch.io&logoColor=white)](https://vincepresso.itch.io/serve-and-dash)
+[![Developer Page](https://img.shields.io/badge/Itch.io-Developer__Profile-000000?style=for-the-badge&logo=itch.io&logoColor=white)](https://vincepresso.itch.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://img.shields.io/badge/status-in__development-orange)](#)
 
-🎮 **[Play the game right now on itch.io!](https://vincepresso.itch.io/serve-and-dash)**
+🎮 **[Play the game on itch.io!](https://vincepresso.itch.io/serve-and-dash)** 👤 **[Check out my itch.io developer profile!](https://vincepresso.itch.io/)**
 
 ---
 
@@ -34,7 +35,8 @@
 
 You can play the latest build directly in your web browser or download full builds on itch.io:
 
-👉 **[https://vincepresso.itch.io/serve-and-dash](https://vincepresso.itch.io/serve-and-dash)**
+* 🎮 **Play Game:** [https://vincepresso.itch.io/serve-and-dash](https://vincepresso.itch.io/serve-and-dash)
+* 🎨 **More Games & Projects:** [https://vincepresso.itch.io/](https://vincepresso.itch.io/)
 
 ---
 
@@ -132,8 +134,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
-## 🙏 Acknowledgments
+## 👨‍💻 Developer & Acknowledgments
 
+- Created by **[Vincepresso](https://vincepresso.itch.io/)**
 - Built with [Godot Engine](https://godotengine.org/)
 - Hosted on [itch.io](https://itch.io/)
 - UI & Sound assets credited in `ATTRIBUTION.md` *(if applicable)*
