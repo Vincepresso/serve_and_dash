@@ -42,9 +42,8 @@ You can play the latest build directly in your web browser or download full buil
 
 ## 🛠️ Built With
 
-* **Engine / Framework:** [Godot Engine 4.x](https://godotengine.org/) *(or Unity / Custom Engine)*
-* **Language:** [GDScript](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html) *(or C# / C++)*
-* **Addons / Plugins:** *(List any addons used, e.g., PhantomCamera, Terrain3D, etc.)*
+* **Engine / Framework:** [Godot Engine 4.x](https://godotengine.org/)
+* **Language:** [GDScript](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html)
 
 ---
 
